@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>신혼집 의사결정 지원 웹페이지3</title>
+    <title>신혼집 의사결정 지원 웹페이지</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -185,6 +185,27 @@
                                 <div class="property-card-footer flex flex-col gap-2">
                                      <a href="https://www.daangn.com/kr/realty-posts/UxyVN6zYx8Y?tradeTypes=MONTH" target="_blank" class="w-full text-center bg-gray-800 text-white py-2 rounded-md hover:bg-gray-700 transition text-sm">매물 정보</a>
                                      <a href="https://map.kakao.com/link/search/마곡 엠밸리 5단지" target="_blank" class="w-full text-center bg-green-500 text-white py-2 rounded-md hover:bg-green-600 transition text-sm">지도 보기</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="property-card">
+                           <img src="https://landthumb-phinf.pstatic.net/20250620_29/1750378447445wdz80_JPEG/C8FA1-4.jpg?type=m562" alt="신길 파크 자이의 외관" onerror="this.onerror=null;this.src='https://placehold.co/600x400/eeeeee/999999?text=Image+Not+Found';" class="w-full h-48 object-cover">
+                            <div class="property-card-content">
+                                <span class="text-sm bg-blue-100 text-blue-800 py-1 px-2 rounded-full self-start">20-30평대 전세</span>
+                                <h3 class="text-xl font-bold mt-3">신길 파크 자이</h3>
+                                <p class="text-gray-600 text-sm mt-1">인근 공원, 평택/용인 접근성 양호</p>
+                                <div class="mt-4 space-y-2 text-sm">
+                                    <p><span class="font-semibold w-16 inline-block">◼︎ 구조:</span> 17.8평 (59㎡) / 방3화2</p>
+                                    <p><span class="font-semibold w-16 inline-block">◼︎ 가격:</span> 전세 6.5억</p>
+                                    <p><span class="font-semibold w-16 inline-block">◼︎ 연락처:</span> 02-832-8984</p>
+                                </div>
+                                <div class="mt-4">
+                                    <textarea data-property-id="singil_xi" rows="2" class="memo-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm" placeholder="메모를 입력하세요..."></textarea>
+                                </div>
+                                <div class="property-card-footer flex flex-col gap-2">
+                                     <a href="https://fin.land.naver.com/articles/2533212256" target="_blank" class="w-full text-center bg-gray-800 text-white py-2 rounded-md hover:bg-gray-700 transition text-sm">매물 정보</a>
+                                     <a href="https://map.kakao.com/link/search/신길 파크자이" target="_blank" class="w-full text-center bg-green-500 text-white py-2 rounded-md hover:bg-green-600 transition text-sm">지도 보기</a>
                                 </div>
                             </div>
                         </div>
@@ -572,13 +593,13 @@
                     type: 'bar',
                     data: {
                         labels: [
-                            wrapLabel('마곡 롯데캐슬', 16), wrapLabel('마곡 엠벨리', 16), wrapLabel('청계 SK VIEW', 16), wrapLabel('논현 펜트힐', 16),
+                            wrapLabel('마곡 롯데캐슬', 16), wrapLabel('마곡 엠벨리', 16), wrapLabel('신길 파크자이', 16), wrapLabel('청계 SK VIEW', 16), wrapLabel('논현 펜트힐', 16),
                             wrapLabel('브라이튼 여의도', 16), wrapLabel('용산투웨니', 16), wrapLabel('파크라움(경매)', 16),
                             wrapLabel('이태원동(경매)', 16), wrapLabel('영등포SK(경매)', 16), wrapLabel('청계천두산(경매)', 16)
                         ],
                         datasets: [{
-                            label: '전세가 / 최저가 (억 원)', data: [7, 8, 7.5, 7.3, 7.2, 7, 8.07, 8, 7.9, 7.5],
-                            backgroundColor: [ brilliantBlues.teal, brilliantBlues.teal, brilliantBlues.teal, brilliantBlues.teal, brilliantBlues.teal, brilliantBlues.teal, brilliantBlues.red, brilliantBlues.red, brilliantBlues.red, brilliantBlues.red ],
+                            label: '전세가 / 최저가 (억 원)', data: [7, 8, 6.5, 7.5, 7.3, 7.2, 7, 8.07, 8, 7.9, 7.5],
+                            backgroundColor: [ brilliantBlues.teal, brilliantBlues.teal, brilliantBlues.teal, brilliantBlues.teal, brilliantBlues.teal, brilliantBlues.teal, brilliantBlues.teal, brilliantBlues.red, brilliantBlues.red, brilliantBlues.red, brilliantBlues.red ],
                             borderWidth: 1, borderRadius: 5
                         }]
                     },
@@ -590,10 +611,11 @@
                 const bubbleChartData = {
                     datasets: [
                         {
-                            label: '전세 (마곡/청계)',
+                            label: '전세 (마곡/청계/신길)',
                             data: [
                                 { x: 7, y: 1, r: 21, name: '마곡 롯데캐슬' },
                                 { x: 8, y: 1, r: 34, name: '마곡 엠벨리' },
+                                { x: 6.5, y: 9, r: 17.8, name: '신길 파크자이'},
                                 { x: 7.5, y: 2, r: 18, name: '청계 SK VIEW' }
                             ],
                             backgroundColor: brilliantBlues.blue,
@@ -647,11 +669,11 @@
                             },
                             y: { 
                                 min: 0,
-                                max: 9,
+                                max: 10,
                                 ticks: { 
                                     stepSize: 1,
                                     callback: function(val) { 
-                                        const yLabels = ['', '마곡', '청계', '논현', '용산', '여의도', '이태원', '영등포', '동대문'];
+                                        const yLabels = ['', '마곡', '청계', '논현', '용산', '여의도', '이태원', '영등포', '동대문', '신길'];
                                         return yLabels[val] || '';
                                     } 
                                 },
